@@ -13,7 +13,30 @@ let mars = document.querySelector('.mars')
 let europa = document.querySelector('.europa')
 let titan = document.querySelector('.titan')
 
+
+let music = document.querySelector('.music')
+music.play()
+
+
+music.addEventListener('timeupdate',()=>{
+   
+
+    if (Math.floor(music.currentTime) % 2) {
+        mars.click()
+      }else if(Math.floor(music.currentTime) % 3){
+        europa.click()
+      }else if(Math.floor(music.currentTime) % 4){
+        titan.click()
+      }else if(Math.floor(music.currentTime)% 5){
+        moon.click()
+      }
+
+
+
+
+})
 data.destinations.filter(e=>e.name=="Moon").map(e=>(
+    
     image.src = e.images.webp,
     name.textContent = e.name,
     description.textContent = e.description,
