@@ -6,11 +6,20 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="./css/index.css">
+  <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
 
-
+  <div class="loading">
+    <span class="loader"></span>
+    <p>NICOLAS</p>
+  </div>
 
   <div class="nav">
     <div class="logo">
@@ -53,6 +62,12 @@
   because we’ll give you a truly out of this world experience!
 
   Explore -->
-
+<script>
+  $(window).on('load',function(){
+    $(".loading").fadeOut(2000);
+    
+    $(".astro-container").fadein(1000);
+})
+</script>
 </body>
 </html>
