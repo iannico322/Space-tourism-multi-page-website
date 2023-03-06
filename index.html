@@ -30,13 +30,15 @@
     
     <ul>
       <a href="#" class="active"><li><span>00</span>Home</li></a>
-      <a href="./destination.html"> <li > <span> 01</span> Destination  </li></a>
+      <a href="./destination.html" class="going"> <li > <span> 01</span> Destination  </li></a>
       <a href="./destination.html"><li><span>02 </span>Crew</li></a>
       <a href="./destination.html"> <li><span>03</span>Technology</li></a>
     </ul>
   </div>
 
   <div class="astro-container">
+    <audio src="./music.mp3" class="music" style=" pointer-events: none; opacity:0; "></audio>
+    <video class="bg-video" preload="auto" muted src="./In the Blink of an Eye-  Space in an Instant.mp4"></video>
     <img class="bg-image" src="./assets/home/background-home-desktop.jpg" alt="">
 
     <div class="text-content">
@@ -47,7 +49,7 @@
     </div>
     
     <div class="btn-container">
-        <a href="./destination.html" style="text-decoration: none;"><button >Explore</button></a> 
+        <button class="btn">Explore</button>
     </div>
     
   </div>
@@ -64,6 +66,30 @@
 
   Explore -->
 <script>
+  let vid = document.querySelector('.bg-video')
+  let music = document.querySelector('.music')
+  let img = document.querySelector('.bg-image')
+  let btn = document.querySelector('.btn')
+  let going = document.querySelector('.going')
+  vid.currentTime = 25;
+  btn.addEventListener('click',()=>{
+    vid.style.display = "block"
+    img.style.display = "none"
+    vid.play();
+    music.play()
+    
+  })  
+  
+  vid.addEventListener('timeupdate',()=>{
+    console.log(Math.floor(vid.currentTime))
+    if(Math.floor(vid.currentTime) == 51){
+      vid.style.display = "none"
+      img.style.display = "block"
+      going.click()
+    
+    }
+  })
+
   $(window).on('load',function(){
     $(".loading").fadeOut(2000);
     
