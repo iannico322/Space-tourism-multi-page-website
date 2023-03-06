@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/nav.css">
+  <link rel="stylesheet" href="./css/destination.css">
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+  <div class="nav">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+      <hr>
+    </div>
+    
+    <ul>
+      <a href="./index.html" ><li><span>00</span>Home</li></a>
+      <a href="./destination.html" class="active"> <li > <span> 01</span> Destination  </li></a>
+      <a href="./destination.html"><li><span>02 </span>Crew</li></a>
+      <a href="./destination.html"> <li><span>03</span>Technology</li></a>
+    </ul>
+  </div>
+
+
+  <div class="astro-container">
+    <img class="bg-image" src="./assets/destination/background-destination-desktop.jpg" alt="">
+
+    <div class="content-container">
+      
+      <div class="title">
+        <p> <span>01</span> Pick your destination</p>
+      </div>
+
+      <div class="main-content">
+        <img class="con-image" src="" alt="">
+
+        <div class="text-content">
+          
+          
+          <ul>
+            <li class="active moon">Moon</li>
+            <li class="mars">Mars</li>
+            <li class="europa">Europa</li>
+            <li class="titan">Titan</li>
+          </ul>
+
+          <h1 class="con-name"></h1>
+          <p class="con-description"></p>
+         
+          <div class="stats">
+            
+            <div>
+              <p>AVG. DISTANCE</p>
+              <h2 class="con-distance"></h2>
+            </div>
+
+            <div>
+              <p>Est. travel time</p>
+              <h2 class="con-ett">3 days</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    
+  
+  </div>
+  <script  type="module" src="./destination.js"></script>
+</body>
+
+
+</html>
